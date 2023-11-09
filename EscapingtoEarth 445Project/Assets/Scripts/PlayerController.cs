@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         else
         {
 
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.W))
             {
                  _yVelocity = _jumpHeight;
             }
