@@ -17,7 +17,7 @@ void Awake () {
 shootableMask = LayerMask.GetMask ("Shootable");
 gunLine = GetComponent<LineRenderer>();
 shootRay.origin = transform.position;
-shootRay.direction = transform.forward;
+shootRay.direction = -transform.forward;
 gunLine.SetPosition(0,transform.position);
 if(Physics.Raycast (shootRay, out shootHit,range, shootableMask)){
     //Add hiting enemie part here.
