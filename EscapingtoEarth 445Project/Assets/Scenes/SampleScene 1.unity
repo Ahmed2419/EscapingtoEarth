@@ -2551,13 +2551,13 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 310222167}
-    - target: {fileID: 2186681891698842700, guid: dc91bb7461e780f4c8adf4b9404f7f20, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5.53
-      objectReference: {fileID: 0}
     - target: {fileID: 3592080572567478899, guid: dc91bb7461e780f4c8adf4b9404f7f20, type: 3}
       propertyPath: m_Name
       value: Player model
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592080572567478899, guid: dc91bb7461e780f4c8adf4b9404f7f20, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4220561778075449545, guid: dc91bb7461e780f4c8adf4b9404f7f20, type: 3}
       propertyPath: m_LocalPosition.x
