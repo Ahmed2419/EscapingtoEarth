@@ -15,7 +15,7 @@ public class GroundEnemy : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             TakeDamage(20);
         }
