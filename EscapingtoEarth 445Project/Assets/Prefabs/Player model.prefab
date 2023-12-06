@@ -488,7 +488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  healthBar: {fileID: 0}
+  healthbar: {fileID: 0}
 --- !u!4 &4220561778075449545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d39e4b17e3b638e4f8e299eb01912c6d, type: 3}

@@ -13,10 +13,12 @@ public class AIEnemy : MonoBehaviour
     private Vector3 RayCastDirection;
 
     private float distance;
+    
     void Start()
     {
         
         DevChaseActive = true;
+        
     }
 
     // Update is called once per frame

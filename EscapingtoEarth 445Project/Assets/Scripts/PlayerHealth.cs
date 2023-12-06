@@ -24,12 +24,24 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(20);
         }
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
+   
 
-    void TakeDamage(int damage)
+
+
+   public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
         healthbar.SetHealth(currentHealth);
     }
+     void OnCollisionEnter(Collision collision){
+        if (collision.gameObject.tag == "Projectile"){
+            TakeDamage(10);
+        }
+     }
 }

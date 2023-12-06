@@ -7,6 +7,7 @@ public class EnemyShoot : MonoBehaviour
     public GameObject bullet;
     public Transform bulletPos;
     private float timer;
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {

@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         
@@ -33,7 +33,12 @@ public class PlayerController : MonoBehaviour
 
         _controller.Move(velocity * Time.deltaTime);
 
-       
+        transform.Translate(direction * _playerSpeed * Time.deltaTime, Space.World);
+
+       if(direction != Vector3.zero)
+        {
+            transform.right = direction;
+        }
 
         
         velocity.y = _yVelocity;
