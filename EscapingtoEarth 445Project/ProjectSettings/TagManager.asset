@@ -8,6 +8,7 @@ TagManager:
   - Chase
   - Lazer
   - Projectile
+  - Player Bullet
   layers:
   - Default
   - TransparentFX

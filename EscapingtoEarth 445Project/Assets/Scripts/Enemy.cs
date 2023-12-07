@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Projectile"))
+        if (collision.CompareTag("Player Bullet"))
         {
             TakeDamage(20);
         }
