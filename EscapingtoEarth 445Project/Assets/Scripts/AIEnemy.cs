@@ -42,7 +42,7 @@ public class AIEnemy : MonoBehaviour
      void EnemyDetection()
     {
          RayCastDirection = PlayerPosition - transform.position;
-        if(Physics.Raycast(transform.position, transform.TransformDirection(RayCastDirection), out RaycastHit hitinfo, 20f) || Physics.Raycast(transform.position, transform.TransformDirection(RayCastDirection), out hitinfo, 20f))
+        if(Physics.Raycast(transform.position, transform.TransformDirection(RayCastDirection), out RaycastHit hitinfo, 5f) || Physics.Raycast(transform.position, transform.TransformDirection(RayCastDirection), out hitinfo, 5f))
         {
             Debug.Log("Hit something");
             Debug.DrawRay(transform.position, transform.TransformDirection(RayCastDirection) * hitinfo.distance, Color.red);
