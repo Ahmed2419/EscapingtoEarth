@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -753,6 +753,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a753d487489fa440a01013612210956, type: 3}
+--- !u!4 &36824330 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5199033945477712602, guid: dc91bb7461e780f4c8adf4b9404f7f20, type: 3}
+  m_PrefabInstance: {fileID: 8699011433440469721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &40850005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 365454941693251938, guid: 4a753d487489fa440a01013612210956, type: 3}
@@ -18129,6 +18134,10 @@ PrefabInstance:
       propertyPath: _playerSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7588081690611130120, guid: dc91bb7461e780f4c8adf4b9404f7f20, type: 3}
+      propertyPath: muzzle
+      value: 
+      objectReference: {fileID: 36824330}
     - target: {fileID: 7588081690611130120, guid: dc91bb7461e780f4c8adf4b9404f7f20, type: 3}
       propertyPath: Projectile
       value: 
