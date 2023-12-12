@@ -27,6 +27,20 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(20);
         }
         
+        //if (currentHealth <= 0)
+        //{
+        //    currentHealth = 0;
+        //    Debug.Log("You're Dead");
+        //    OnPlayerDeath?.Invoke();
+        //    Destroy(gameObject);
+        //}
+    }
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        healthbar.SetHealth(currentHealth);
+
         if (currentHealth <= 0)
         {
             currentHealth = 0;
@@ -35,26 +49,13 @@ public class PlayerHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
-   
 
-
-
-   public void TakeDamage(int damage)
+    void OnCollisionEnter(Collision collision)
     {
-        currentHealth -= damage;
-
-        healthbar.SetHealth(currentHealth);
-
-        // if (currentHealth <= 0)
-        //{
-        //    currentHealth = 0;
-        //    Debug.Log("You're Dead");
-        //    OnPlayerDeath?.Invoke();
-        //}
-    }
-     void OnCollisionEnter(Collision collision){
-        if (collision.gameObject.tag == "Projectile"){
+        if (collision.gameObject.tag == "Projectile")
+        {
             TakeDamage(10);
         }
-     }
+    }
 }
+

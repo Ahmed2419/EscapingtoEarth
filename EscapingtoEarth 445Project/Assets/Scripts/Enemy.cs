@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public float enemyDamage;
 
     public HealthBar healthBar;
+    public PlayerHealth playerHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,12 @@ public class Enemy : MonoBehaviour
         if (collision.CompareTag("Player Bullet"))
         {
             TakeDamage(20);
+        }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            playerHealth.TakeDamage(10);
+            Debug.Log("Ouch");
         }
     }
     public void TakeDamage(int damage)

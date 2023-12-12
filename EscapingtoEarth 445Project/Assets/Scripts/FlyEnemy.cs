@@ -17,7 +17,7 @@ public class FlyEnemy : Enemy
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            TakeDamage(20);
+            TakeDamage(10);
         }
         if (currentEnemyHealth <= 0)
         {

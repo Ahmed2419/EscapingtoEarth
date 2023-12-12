@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerTriggers : MonoBehaviour
 {
+    public PlayerHealth playerHealth;
     // Start is called before the first frame update
-    public GameObject player;
+    //public GameObject player;
     void Start()
     {
         
@@ -17,13 +19,22 @@ public class PlayerTriggers : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter(Collider other)
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Enemy"))
+    //    {
+    //        Destroy(player);
+    //        
+    //        SceneManager.LoadScene(2);
+    //    }
+    //}
+
+    void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Enemy"))
+        if (collision.gameObject.tag == "Player")
         {
-            Destroy(player);
+            playerHealth.TakeDamage(10);
             Debug.Log("Ouch");
-            SceneManager.LoadScene(0);
         }
     }
 }
