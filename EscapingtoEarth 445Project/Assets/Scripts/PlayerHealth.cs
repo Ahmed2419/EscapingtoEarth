@@ -56,6 +56,10 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(10);
         }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            TakeDamage(100);
+        }
     }
 }
 

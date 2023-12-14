@@ -37,8 +37,8 @@ public class TimeRewind : MonoBehaviour
     }
     void Rewind()
     {
-        transform.position = positions[1];
-        positions.RemoveAt(1);
+        transform.position = positions[0];
+        positions.RemoveAt(0);
     }
     void Record()
     {

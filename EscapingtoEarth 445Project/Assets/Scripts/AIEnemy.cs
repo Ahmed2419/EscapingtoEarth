@@ -10,8 +10,11 @@ public class AIEnemy : MonoBehaviour
         public float speed;
     [SerializeField]
     private bool DevChaseActive;
+    [SerializeField]
+    private bool isFlyingEnemy;
     private Vector3 RayCastDirection;
-
+    public float AvoidanceSpeed;
+    
     private float distance;
     
     void Start()
@@ -26,6 +29,7 @@ public class AIEnemy : MonoBehaviour
     {
         PlayerPosition = player.gameObject.transform.position;
         EnemyDetection();
+        FlyingEnemy();
         //Debug.Log(PlayerPosition);
 
     }
@@ -42,7 +46,7 @@ public class AIEnemy : MonoBehaviour
      void EnemyDetection()
     {
          RayCastDirection = PlayerPosition - transform.position;
-        if(Physics.Raycast(transform.position, transform.TransformDirection(RayCastDirection), out RaycastHit hitinfo, 20f) || Physics.Raycast(transform.position, transform.TransformDirection(RayCastDirection), out hitinfo, 20f))
+        if(Physics.Raycast(transform.position, transform.TransformDirection(RayCastDirection), out RaycastHit hitinfo, 10f) || Physics.Raycast(transform.position, transform.TransformDirection(RayCastDirection), out hitinfo, 10f))
         {
             Debug.Log("Hit something");
             Debug.DrawRay(transform.position, transform.TransformDirection(RayCastDirection) * hitinfo.distance, Color.red);
@@ -55,8 +59,24 @@ public class AIEnemy : MonoBehaviour
         else
         {
             Debug.Log("Nothing");
-            Debug.DrawRay(transform.position, transform.TransformDirection(RayCastDirection) * 20f, Color.green);
+            Debug.DrawRay(transform.position, transform.TransformDirection(RayCastDirection) * 10f, Color.green);
            // Debug.DrawRay(transform.position, transform.TransformDirection(RayCastDirection) * 20f, Color.green);
         }
+    }
+    void FlyingEnemy()
+    {
+        if (isFlyingEnemy)
+        {
+            RayCastDirection = PlayerPosition - transform.position;
+            if (Physics.Raycast(transform.position, transform.TransformDirection(RayCastDirection), out RaycastHit hitinfo, 7f) || Physics.Raycast(transform.position, transform.TransformDirection(RayCastDirection), out hitinfo, 7f))
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(RayCastDirection) * hitinfo.distance, Color.yellow);
+                Avoid();
+            }
+        }
+    }
+    void Avoid()
+    {
+        transform.position += Vector3.up * AvoidanceSpeed * Time.deltaTime;
     }
 }
