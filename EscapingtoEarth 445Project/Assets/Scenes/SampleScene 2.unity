@@ -2647,15 +2647,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2294326651695698559, guid: ac02ffb39ad6f754fa6997f421d2a449, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2294326651695698559, guid: ac02ffb39ad6f754fa6997f421d2a449, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5218822519534555881, guid: ac02ffb39ad6f754fa6997f421d2a449, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218822519534555881, guid: ac02ffb39ad6f754fa6997f421d2a449, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6479643807799753001, guid: ac02ffb39ad6f754fa6997f421d2a449, type: 3}
       propertyPath: m_LocalPosition.x

@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     // reference to script: https://www.youtube.com/watch?v=ZfRbuOCAeE8
     public static event Action OnPlayerDeath;
 
-    public int maxHealth = 100;
+    public int maxHealth = 150;
     public int currentHealth;
 
     public HealthBar healthbar;
@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            TakeDamage(20);
+            TakeDamage(10);
         }
         
         //if (currentHealth <= 0)
@@ -46,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = 0;
             Debug.Log("You're Dead");
             OnPlayerDeath?.Invoke();
-           
+            Destroy(gameObject);
         }
     }
 
@@ -58,7 +58,7 @@ public class PlayerHealth : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            TakeDamage(100);
+            TakeDamage(50);
         }
     }
 }

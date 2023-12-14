@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.008958812, g: 0.013101446, b: 0.02045097, a: 1}
+  m_IndirectSpecularColor: {r: 0.008916955, g: 0.013043514, b: 0.020362426, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2205,7 +2205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3647860204298509754, guid: dd04bbfc1ffa92f4eaed93dae3953856, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3647860204298509754, guid: dd04bbfc1ffa92f4eaed93dae3953856, type: 3}
       propertyPath: m_TagString
@@ -2289,11 +2289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4816987896425605055, guid: dd04bbfc1ffa92f4eaed93dae3953856, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4816987896425605055, guid: dd04bbfc1ffa92f4eaed93dae3953856, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4866066372618707000, guid: dd04bbfc1ffa92f4eaed93dae3953856, type: 3}
       propertyPath: m_TagString
@@ -2305,7 +2305,7 @@ PrefabInstance:
       objectReference: {fileID: 728483425}
     - target: {fileID: 5304909238023476460, guid: dd04bbfc1ffa92f4eaed93dae3953856, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5304909238023476460, guid: dd04bbfc1ffa92f4eaed93dae3953856, type: 3}
       propertyPath: enemySpeed
@@ -7060,7 +7060,7 @@ Transform:
   m_GameObject: {fileID: 392654574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -72, y: 27.1, z: -283.5}
+  m_LocalPosition: {x: -99.7, y: 267.55, z: -283.5}
   m_LocalScale: {x: 4.11125, y: 9.718339, z: 27.681013}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40028,6 +40028,10 @@ PrefabInstance:
     - target: {fileID: 2186681891698842700, guid: dc91bb7461e780f4c8adf4b9404f7f20, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249892476669908934, guid: dc91bb7461e780f4c8adf4b9404f7f20, type: 3}
+      propertyPath: m_TagString
+      value: Player Bullet
       objectReference: {fileID: 0}
     - target: {fileID: 2351603707401921134, guid: dc91bb7461e780f4c8adf4b9404f7f20, type: 3}
       propertyPath: m_Enabled
