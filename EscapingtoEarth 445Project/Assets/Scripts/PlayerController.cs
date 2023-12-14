@@ -32,9 +32,9 @@ public class PlayerController : MonoBehaviour
 
         Vector3 velocity = direction * _playerSpeed;
 
-        _controller.Move(velocity * Time.deltaTime);
+        _controller.Move(velocity * Time.unscaledDeltaTime);
 
-        transform.Translate(direction * _playerSpeed * Time.deltaTime, Space.World);
+        transform.Translate(direction * _playerSpeed * Time.unscaledDeltaTime, Space.World);
 
        if(direction != Vector3.zero)
         {
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         
         velocity.y = _yVelocity;
 
-        _controller.Move(velocity * Time.deltaTime);
+        _controller.Move(velocity * Time.unscaledDeltaTime);
         if (_controller.isGrounded == false)
         {
            _yVelocity -= _gravity;

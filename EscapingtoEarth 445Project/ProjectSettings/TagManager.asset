@@ -9,6 +9,7 @@ TagManager:
   - Lazer
   - Projectile
   - Player Bullet
+  - CameraDeath
   layers:
   - Default
   - TransparentFX

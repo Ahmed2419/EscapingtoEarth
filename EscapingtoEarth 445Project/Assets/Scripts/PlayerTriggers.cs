@@ -19,15 +19,15 @@ public class PlayerTriggers : MonoBehaviour
     {
         
     }
-   /* void OnTriggerEnter(Collider other)
-   {
-       if (other.CompareTag("Enemy"))
-        {
-            playerHealth == playerHealth - 100;
-            
-          
-}
-    }*/
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Enemy"))
+    //    {
+    //        Destroy(player);
+    //        
+    //        SceneManager.LoadScene(2);
+    //    }
+    //}
 
     void OnCollisionEnter(Collision collision)
     {
